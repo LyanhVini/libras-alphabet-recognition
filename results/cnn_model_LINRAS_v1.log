@@ -1,0 +1,80 @@
+[INFO] Treinando a CNN...
+Epoch 1/30
+1131/1131 [==============================] - 2948s 3s/step - loss: 0.3160 - accuracy: 0.9356 - val_loss: 13.1173 - val_accuracy: 0.0472
+Epoch 2/30
+1131/1131 [==============================] - 122s 108ms/step - loss: 0.3225 - accuracy: 0.9287 - val_loss: 13.6670 - val_accuracy: 0.0472
+Epoch 3/30
+1131/1131 [==============================] - 124s 109ms/step - loss: 0.2717 - accuracy: 0.9447 - val_loss: 12.4584 - val_accuracy: 0.0472
+Epoch 4/30
+1131/1131 [==============================] - 122s 108ms/step - loss: 0.2616 - accuracy: 0.9489 - val_loss: 13.8718 - val_accuracy: 0.0472
+Epoch 5/30
+1131/1131 [==============================] - 124s 109ms/step - loss: 0.2591 - accuracy: 0.9494 - val_loss: 13.1995 - val_accuracy: 0.0472
+Epoch 6/30
+1131/1131 [==============================] - 124s 110ms/step - loss: 0.2527 - accuracy: 0.9504 - val_loss: 12.4865 - val_accuracy: 0.0472
+Epoch 7/30
+1131/1131 [==============================] - 122s 107ms/step - loss: 0.2379 - accuracy: 0.9559 - val_loss: 15.9195 - val_accuracy: 0.0472
+Epoch 8/30
+1131/1131 [==============================] - 123s 109ms/step - loss: 0.2335 - accuracy: 0.9569 - val_loss: 15.3937 - val_accuracy: 0.0472
+Epoch 9/30
+1131/1131 [==============================] - 122s 108ms/step - loss: 0.2356 - accuracy: 0.9560 - val_loss: 15.7756 - val_accuracy: 0.0472
+Epoch 10/30
+1131/1131 [==============================] - 185s 164ms/step - loss: 0.2288 - accuracy: 0.9574 - val_loss: 13.8491 - val_accuracy: 0.0472
+Epoch 11/30
+1131/1131 [==============================] - 123s 109ms/step - loss: 0.2273 - accuracy: 0.9572 - val_loss: 15.5547 - val_accuracy: 0.0472
+Epoch 12/30
+1131/1131 [==============================] - 124s 110ms/step - loss: 0.2220 - accuracy: 0.9598 - val_loss: 15.5551 - val_accuracy: 0.0472
+Epoch 13/30
+1131/1131 [==============================] - 135s 119ms/step - loss: 0.2266 - accuracy: 0.9592 - val_loss: 16.1490 - val_accuracy: 0.0472
+Epoch 14/30
+1131/1131 [==============================] - 123s 109ms/step - loss: 0.2268 - accuracy: 0.9591 - val_loss: 16.3362 - val_accuracy: 0.0472
+Epoch 15/30
+1131/1131 [==============================] - 120s 106ms/step - loss: 0.2132 - accuracy: 0.9623 - val_loss: 16.2267 - val_accuracy: 0.0472
+Epoch 16/30
+1131/1131 [==============================] - 122s 108ms/step - loss: 0.2227 - accuracy: 0.9613 - val_loss: 14.2151 - val_accuracy: 0.0472
+Epoch 17/30
+1131/1131 [==============================] - 123s 108ms/step - loss: 0.2168 - accuracy: 0.9619 - val_loss: 14.6413 - val_accuracy: 0.0472
+Epoch 18/30
+1131/1131 [==============================] - 125s 110ms/step - loss: 0.2556 - accuracy: 0.9512 - val_loss: 17.4886 - val_accuracy: 0.0472
+Epoch 18: early stopping
+
+
+
+[INFO] Tempo de execução da CNN: 176.1 min
+[INFO] Summary: 
+Model: "sequential_3"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_9 (Conv2D)           (None, 64, 64, 32)        896       
+                                                                 
+ leaky_re_lu_9 (LeakyReLU)   (None, 64, 64, 32)        0         
+                                                                 
+ max_pooling2d_9 (MaxPooling  (None, 32, 32, 32)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_10 (Conv2D)          (None, 30, 30, 32)        9248      
+                                                                 
+ leaky_re_lu_10 (LeakyReLU)  (None, 30, 30, 32)        0         
+                                                                 
+ max_pooling2d_10 (MaxPoolin  (None, 15, 15, 32)       0         
+ g2D)                                                            
+                                                                 
+ conv2d_11 (Conv2D)          (None, 13, 13, 64)        18496     
+                                                                 
+ leaky_re_lu_11 (LeakyReLU)  (None, 13, 13, 64)        0         
+                                                                 
+ max_pooling2d_11 (MaxPoolin  (None, 6, 6, 64)         0         
+ g2D)                                                            
+                                                                 
+ flatten_3 (Flatten)         (None, 2304)              0         
+                                                                 
+ dense_6 (Dense)             (None, 256)               590080    
+                                                                 
+ dropout_3 (Dropout)         (None, 256)               0         
+                                                                 
+ dense_7 (Dense)             (None, 22)                5654      
+                                                                 
+=================================================================
+Total params: 624,374
+Trainable params: 624,374
+Non-trainable params: 0
